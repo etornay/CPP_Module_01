@@ -8,12 +8,11 @@ MAGENTA	=\033[1;35m\033[4m
 YELLOW	=\033[1;33m
 RESET	=\033[0m
 
-NAME = zombie
+NAME = zombieHorde
 
 SRC = 	Zombie.cpp \
 		main.cpp \
-		newZombie.cpp \
-		randomChump.cpp
+		zombieHorde.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
