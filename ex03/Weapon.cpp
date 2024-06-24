@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etornay- <etornay-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 18:25:41 by etornay-          #+#    #+#             */
-/*   Updated: 2024/06/24 19:48:01 by etornay-         ###   ########.fr       */
+/*   Created: 2024/06/24 18:59:28 by etornay-          #+#    #+#             */
+/*   Updated: 2024/06/24 19:52:49 by etornay-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie::Zombie(std::string str)
+Weapon::Weapon(void)
 {
-	this->name = str;
 }
 
-Zombie::~Zombie(void)
+Weapon::Weapon(std::string str)
 {
-	std::cout << "Deleting " << this->name << ", see ya" << std::endl;
+	this->type = str;
 }
 
-std::string Zombie::getName()
+Weapon::~Weapon(void)
 {
-	return (this->name);
+	std::cout << "Deleting " << this->type << ", see ya" << std::endl;
 }
 
-void Zombie::announce()
+std::string Weapon::getType()
 {
-	std::cout << this->getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	return (this->type);
 }

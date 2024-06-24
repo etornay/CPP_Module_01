@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etornay- <etornay-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 18:25:41 by etornay-          #+#    #+#             */
-/*   Updated: 2024/06/24 19:48:01 by etornay-         ###   ########.fr       */
+/*   Created: 2024/06/24 19:00:40 by etornay-          #+#    #+#             */
+/*   Updated: 2024/06/24 19:44:09 by etornay-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
+# include <iostream>
 
-Zombie::Zombie(std::string str)
+class Weapon
 {
-	this->name = str;
-}
-
-Zombie::~Zombie(void)
-{
-	std::cout << "Deleting " << this->name << ", see ya" << std::endl;
-}
-
-std::string Zombie::getName()
-{
-	return (this->name);
-}
-
-void Zombie::announce()
-{
-	std::cout << this->getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+	private:
+			std::string type;
+			
+	public:
+			Weapon(void);
+			Weapon(std::string);
+			~Weapon(void);
+			std::string getType(void);
+			std::string setType(void);
+};
+#endif
