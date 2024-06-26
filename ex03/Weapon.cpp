@@ -6,7 +6,7 @@
 /*   By: etornay- <etornay-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 18:59:28 by etornay-          #+#    #+#             */
-/*   Updated: 2024/06/24 19:52:49 by etornay-         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:12:04 by etornay-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,14 @@ Weapon::Weapon(std::string str)
 
 Weapon::~Weapon(void)
 {
-	std::cout << "Deleting " << this->type << ", see ya" << std::endl;
 }
 
-std::string Weapon::getType()
+const std::string &Weapon::getType()
 {
 	return (this->type);
+}
+
+void Weapon::setType(std::string type)
+{
+	this->type = type;
 }

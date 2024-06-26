@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   weapon.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etornay- <etornay-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 19:00:40 by etornay-          #+#    #+#             */
-/*   Updated: 2024/06/24 19:44:09 by etornay-         ###   ########.fr       */
+/*   Updated: 2024/06/26 18:48:10 by etornay-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Weapon
 			Weapon(void);
 			Weapon(std::string);
 			~Weapon(void);
-			std::string getType(void);
-			std::string setType(void);
+			const std::string &getType(void);
+			void setType(std::string type);
 };
 #endif
