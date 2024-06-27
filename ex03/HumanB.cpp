@@ -6,29 +6,34 @@
 /*   By: etornay- <etornay-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 19:29:45 by etornay-          #+#    #+#             */
-/*   Updated: 2024/06/26 19:53:50 by etornay-         ###   ########.fr       */
+/*   Updated: 2024/06/27 19:20:35 by etornay-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name, Weapon weapon)
+/* HumanB::HumanB(void)
 {
+	
+}*/
+
+HumanB::HumanB(std::string name)
+{
+	this->name = name;
+	std::cout << "HumanB " << name << " has appeared too." << std::endl;
 }
 
 HumanB::~HumanB(void)
 {
+	std::cout << "HumanB " << name << " fled the place." << std::endl;
 }
 
 void HumanB::Attack(void)
 {
-	if (weapon)
-		std::cout << name << " attacks with " << weapon.getType() << std::endl;
-	else
-		std::cout << name << " has not any weapon " << std::endl;
+	std::cout << this->name << " attacks with " << this->weapon->getType() << std::endl;
 }
 
-void HumanB::setWeapon(Weapon weapon)
+void HumanB::setWeapon(Weapon &weapon)
 {
-	this->weapon = weapon;
+	this->weapon = &weapon;
 }
