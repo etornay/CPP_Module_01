@@ -8,9 +8,10 @@ MAGENTA	=\033[1;35m\033[4m
 YELLOW	=\033[1;33m
 RESET	=\033[0m
 
-NAME = losers
+NAME = harl
 
-SRC = 	main.cpp
+SRC = 	main.cpp \
+		Harl.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
