@@ -6,7 +6,7 @@
 /*   By: etornay- <etornay-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:16:11 by etornay-          #+#    #+#             */
-/*   Updated: 2024/07/02 19:25:46 by etornay-         ###   ########.fr       */
+/*   Updated: 2024/07/08 19:23:03 by etornay-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Harl::Harl(void)
 
 Harl::~Harl(void)
 {
-	std::cout << "Deleting Harl 2.0" << std::endl;
+	std::cout << std::endl << "< Deleting Harl 2.0 >" << std::endl;
 }
 void	Harl::debug(void)
 {
@@ -38,4 +38,21 @@ void	Harl::warning(void)
 void	Harl::error(void)
 {
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
+}
+
+void	Harl::complain(std::string level)
+{
+	void (Harl::*functions[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	for (int i = 0; i < 4; i++)
+	{
+		std::cout << "hola" << std::endl;
+		if (level == levels[i])
+		{
+			std::cout << "adios" << std::endl;
+			(this->*functions[i])();
+			std::cout << "que tal" << std::endl;
+			break ;
+		}
+	}
 }

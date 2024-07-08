@@ -6,7 +6,7 @@
 /*   By: etornay- <etornay-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:16:18 by etornay-          #+#    #+#             */
-/*   Updated: 2024/07/02 19:04:34 by etornay-         ###   ########.fr       */
+/*   Updated: 2024/07/08 15:43:59 by etornay-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Harl
 	public:
 			Harl(void);
 			~Harl(void);
+			void complain(std::string level);
 };
 
 #endif
