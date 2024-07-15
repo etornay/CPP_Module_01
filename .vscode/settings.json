@@ -47,6 +47,8 @@
 		"stdexcept": "cpp",
 		"streambuf": "cpp",
 		"typeinfo": "cpp",
-		"weapon.hpp": "c"
+		"weapon.hpp": "c",
+		"cstring": "cpp",
+		"fstream": "cpp"
 	}
 }

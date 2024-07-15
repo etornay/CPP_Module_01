@@ -6,7 +6,7 @@
 /*   By: etornay- <etornay-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 18:25:41 by etornay-          #+#    #+#             */
-/*   Updated: 2024/06/20 14:49:30 by etornay-         ###   ########.fr       */
+/*   Updated: 2024/07/15 14:56:23 by etornay-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ Zombie::~Zombie(void)
 	std::cout << "Deleting " << this->name << ", see ya" << std::endl;
 }
 
-std::string Zombie::getName()
+void Zombie::getName(std::string str)
 {
-	return (this->name);
+	this->name = str;
 }
 
 void Zombie::announce()
 {
-	std::cout << this->getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
